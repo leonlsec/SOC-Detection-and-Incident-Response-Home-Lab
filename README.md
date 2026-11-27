@@ -101,8 +101,10 @@ This repository does not offer a one-click deployable SOC environment. Commands 
 
 ## Project documentation status
 
-The lab implementation and two controlled case investigations are historically documented. **Portfolio documentation remains in progress** pending final public-release review, GitHub publication, CV bullets and the final learning audit. No GitHub repository has been created or published by this draft.
+The SOC Home Lab implementation and two controlled security investigations are documented and hosted in a private GitHub repository. Both case studies have undergone technical and evidence review. English and Croatian CV/LinkedIn project materials have been prepared separately.
+
+The project is pending final public-release approval and a concluding documentation audit. Historical lab findings are presented as authorized simulations, not production security incidents.
 
 ## Private career drafts (local only)
 
-This **download bundle** also contains `career-materials/` with English/Croatian CV entries, LinkedIn Projects descriptions and interview preparation. That folder is **intentionally ignored by Git** and is **not part of the intended public technical repository**. When publishing via GitHub web upload, exclude it manually; `.gitignore` only affects normal Git staging.
+English and Croatian CV entries, LinkedIn descriptions, and interview preparation materials are maintained locally in the career-materials/ directory. These documents are intentionally excluded from Git tracking through .gitignore and are not included in this GitHub repository.
