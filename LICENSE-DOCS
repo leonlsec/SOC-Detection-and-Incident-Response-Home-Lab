@@ -1,0 +1,25 @@
+Creative Commons Attribution 4.0 International
+
+Copyright (c) 2026 Leon Luković (GitHub: leonlsec)
+
+This license covers the documentation and prose in this repository: Markdown
+write-ups and diagram source files (*.mmd and *.dot). It also covers the
+rendered architecture figures architecture/architecture.svg and
+architecture/architecture.png, which are published forms of that source.
+
+You may share and adapt this material for any purpose, including commercial
+use, if you give appropriate credit, provide a link to the license, and
+indicate whether you made changes. Attribute the work to Leon Luković
+(GitHub: https://github.com/leonlsec).
+
+Human-readable summary: https://creativecommons.org/licenses/by/4.0/
+Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+This license does not cover KQL queries or code snippets. Those are under
+the MIT License in the LICENSE file.
+
+Evidence screenshots and other evidence images are excluded from this
+license and from the MIT License. That exclusion includes every file under
+investigations/**/evidence and any other PNG or SVG that is evidence.
+Those files are all rights reserved. Copyright (c) 2026 Leon Luković
+(GitHub: leonlsec).
