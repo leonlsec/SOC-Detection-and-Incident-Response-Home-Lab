@@ -95,7 +95,7 @@ SOC-Detection-and-Incident-Response-Home-Lab/
 
 ## Evidence, privacy and reproducibility
 
-The screenshots are historical original-source crops. Both case studies include evidence manifests with screenshot provenance and **SHA-256 hashes for the original files and packaged crops**. Some retained lab-only identifiers (the VM hostname, local account, and workspace name) are intentionally visible for correlation; **the author approved public disclosure following the privacy review**. Authentication secrets, raw investigation ZIP files, and unnecessary network identifiers were not included in this draft.
+The screenshots are historical original-source crops. Both case studies include evidence manifests with screenshot provenance and **SHA-256 hashes for the original files and packaged crops**. Some retained lab-only identifiers (the VM hostname, local account, and workspace name) are intentionally visible for correlation; **the author approved public disclosure following the privacy review**. Authentication secrets, raw investigation ZIP files, and unnecessary network identifiers were not included in this public repository.
 
 This repository does not offer a one-click deployable SOC environment. Commands and KQL are preserved **as historically used** or clearly labeled reconstructed examples. Historical seven-day queries should not be interpreted as current live detections. See [scope and limitations](docs/scope-and-evidence-limits.md) and [release checklist](docs/release-checklist.md).
 

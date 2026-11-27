@@ -122,7 +122,7 @@ A nearby successful-logon Event ID `4624` belonged to `NT AUTHORITY\SYSTEM` with
 - The parent process creation event could not be retrieved; the likely cause is not independently proven.
 - The analytics rule had no entity mapping, so the incident entity graph was empty.
 - The full exact KQL syntax of every original investigative timeline query was not preserved. The screenshot shows a query excerpt and a real result count; any reconstructed full query should be labeled as reconstructed.
-- The primary screenshots are **content-preserving crops** of the original archive images. Browser address bars containing tenant identifiers were excluded, but the lab hostname and workspace name remain visible. Perform a final privacy and visual-quality review before public GitHub release.
+- The primary screenshots are **content-preserving crops** of the original archive images. Browser address bars containing tenant identifiers were excluded, but the lab hostname and workspace name remain visible. The selected images underwent visual privacy review before public release; retained lab identifiers were approved for disclosure.
 - The screenshot of the selected closure settings precedes saving; do not use it as sole proof that the incident state changed.
 
 ## Lessons learned
@@ -138,9 +138,9 @@ A nearby successful-logon Event ID `4624` belonged to `NT AUTHORITY\SYSTEM` with
 Primary selected evidence came from the uploaded `Screenshots(2).zip`, which retained the historical numbered images. The four included image crops correspond to original screenshots **347, 329, 334 and 340**. Supporting, intentionally omitted images include **344** (12 events), **345** (one matching event), and **338** (pre-save proposed closure). The detailed case source is Module 11, supported by ATT&CK mapping in Module 12 and response decisions in Module 13.
 
 
-## QA verification and public-release boundary
+## QA verification and publication status
 
 - **Evidence and technical cross-check:** Completed on 24 November 2026 against the relevant Notion modules and the original numbered images in `Screenshots(2).zip`.
 - **Screenshot provenance:** Original archive members were retained unchanged. Selected images are derived, documented crops/redactions; see `EVIDENCE_MANIFEST.md` for SHA-256 fingerprints of originals and packaged copies.
-- **Privacy inspection:** No visible real email address, browser URL containing a tenant GUID, credential, token, or exposed IP/MAC address was identified in the packaged images. Lab hostname, local account and selected workspace labels are intentionally retained for technical context; confirm they may be published before uploading.
-- **Remaining release steps:** Confirm the public identity convention for lab names, perform final human review at display resolution, and integrate both reports into the top-level GitHub repository. This ZIP has **not** been published.
+- **Privacy inspection:** No visible real email address, browser URL containing a tenant GUID, credential, token, or exposed IP/MAC address was identified in the packaged images. Lab hostname, local account and selected workspace labels are intentionally retained with author approval for technical context.
+- **Remaining release steps:** This report and its four curated images are published in the public GitHub repository. The original screenshot archive is not included.

@@ -173,18 +173,18 @@ The query is also retained in [`queries/alertinfo-historical.kql`](queries/alert
 ## Evidence integrity and publication status
 
 - The five primary images and optional Advanced Hunting image are **content-preserving crops** of original numbered PNGs in `Screenshots(2).zip`. Browser URLs containing identifier strings were excluded; an IP/MAC panel in Evidence 01 was masked. The original archive was not edited.
-- The cropped images still display the lab hostname, local account and some portal context. Review for remaining personal/tenant identifiers, date labels and legibility before any public release.
+- The cropped images still display the lab hostname, local account and some portal context. The selected images underwent visual privacy review before public release; retained lab-only identifiers were approved for publication.
 - The original raw `Screenshots(2).zip`, Defender investigation package, tenant credentials, local host diagnostics and unrelated screenshots are **not** included in this package.
 - There is no independently verified live cloud availability or license state at this drafting date. The historical Defender trial and later disabled Azure subscription do not imply currently active security services.
 - Avoid claiming that screenshots of a UI **before Save** prove the backend status changed. The included post-save incident image is the stronger closure proof.
 - This case and the separate **Microsoft Sentinel Incident 4** case cover different detection platforms and must not be conflated.
 
-*Source record:* SOC Lab Notion, Module 10 Steps 10.2–10.6; Module 14 Steps 14.2 and 14.4. See `EVIDENCE_MANIFEST.md` for screenshot provenance. This portfolio report is a draft, **not yet published**.
+*Source record:* SOC Lab Notion, Module 10 Steps 10.2–10.6; Module 14 Steps 14.2 and 14.4. See `EVIDENCE_MANIFEST.md` for screenshot provenance. This report is published in the public SOC Home Lab GitHub repository.
 
 
-## QA verification and public-release boundary
+## QA verification and publication status
 
 - **Evidence and technical cross-check:** Completed on 24 November 2026 against the relevant Notion modules and the original numbered images in `Screenshots(2).zip`.
 - **Screenshot provenance:** Original archive members were retained unchanged. Selected images are derived, documented crops/redactions; see `EVIDENCE_MANIFEST.md` for SHA-256 fingerprints of originals and packaged copies.
-- **Privacy inspection:** No visible real email address, browser URL containing a tenant GUID, credential, token, or exposed IP/MAC address was identified in the packaged images. Lab hostname, local account and selected workspace labels are intentionally retained for technical context; confirm they may be published before uploading.
-- **Remaining release steps:** Confirm the public identity convention for lab names, perform final human review at display resolution, and integrate both reports into the top-level GitHub repository. This ZIP has **not** been published.
+- **Privacy inspection:** No visible real email address, browser URL containing a tenant GUID, credential, token, or exposed IP/MAC address was identified in the packaged images. Lab hostname, local account and selected workspace labels are intentionally retained with author approval for technical context.
+- **Remaining release steps:** This report and its curated images are published in the public GitHub repository. The original screenshot archive is not included.
