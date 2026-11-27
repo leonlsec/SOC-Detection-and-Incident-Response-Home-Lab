@@ -68,6 +68,8 @@ For a quick employer-facing overview, see the [one-page recruiter summary](docs/
 ```text
 SOC-Detection-and-Incident-Response-Home-Lab/
 ├── README.md                        # You are here
+├── LICENSE                          # MIT: KQL and code snippets
+├── LICENSE-DOCS                     # CC BY 4.0: documentation and diagram source
 ├── architecture/
 │   ├── architecture.svg             # Viewable diagram
 │   ├── architecture.png             # Raster version
@@ -108,3 +110,15 @@ The repository is now public. Final documentation review and CV/LinkedIn integra
 ## Private career drafts (local only)
 
 English and Croatian CV entries, LinkedIn descriptions, and interview preparation materials are maintained locally in the career-materials/ directory. These documents are intentionally excluded from Git tracking through .gitignore and are not included in this GitHub repository.
+
+## License
+
+Copyright © 2026 Leon Luković (GitHub: [leonlsec](https://github.com/leonlsec)). Three terms apply:
+
+| Material | Terms |
+| --- | --- |
+| KQL queries (`*.kql`) and code snippets | [MIT License](LICENSE) |
+| Markdown write-ups, diagram source (`.mmd`, `.dot`), and the rendered architecture diagram (`architecture.svg`, `architecture.png`) | [CC BY 4.0](LICENSE-DOCS) |
+| Evidence images under `investigations/**/evidence`, and any other PNG or SVG evidence | All rights reserved |
+
+GitHub's license badge reads `LICENSE`, the MIT grant for the code. Documentation terms, the link to the CC BY 4.0 legal code, and the evidence exclusion are in [LICENSE-DOCS](LICENSE-DOCS).
