@@ -2,7 +2,7 @@
 
 **Windows endpoint monitoring · Microsoft Sentinel SIEM · Microsoft Defender for Endpoint / XDR · KQL · Incident investigation**
 
-> **Portfolio status:** Historical, authorized home-lab exercises. This repository is a **pre-publication draft** with two QA-reviewed investigation case studies; it is not a production SOC system. Azure free credit expired and the Sentinel subscription was subsequently disabled. Current Microsoft Defender licensing and cloud telemetry have not been reverified.
+> **Portfolio status:** Historical, authorized home-lab exercises. This repository is a **public portfolio** with two QA-reviewed investigation case studies; it is not a production SOC system. Azure free credit expired and the Sentinel subscription was subsequently disabled. Current Microsoft Defender licensing and cloud telemetry have not been reverified.
 
 ## Overview
 
@@ -95,15 +95,15 @@ SOC-Detection-and-Incident-Response-Home-Lab/
 
 ## Evidence, privacy and reproducibility
 
-The screenshots are historical original-source crops. Both case studies include evidence manifests with screenshot provenance and **SHA-256 hashes for the original files and packaged crops**. Some retained lab-only identifiers (the VM hostname, local account, and workspace name) are intentionally visible for correlation; **a final public-disclosure decision is still pending**. Authentication secrets, raw investigation ZIP files, and unnecessary network identifiers were not included in this draft.
+The screenshots are historical original-source crops. Both case studies include evidence manifests with screenshot provenance and **SHA-256 hashes for the original files and packaged crops**. Some retained lab-only identifiers (the VM hostname, local account, and workspace name) are intentionally visible for correlation; **the author approved public disclosure following the privacy review**. Authentication secrets, raw investigation ZIP files, and unnecessary network identifiers were not included in this draft.
 
 This repository does not offer a one-click deployable SOC environment. Commands and KQL are preserved **as historically used** or clearly labeled reconstructed examples. Historical seven-day queries should not be interpreted as current live detections. See [scope and limitations](docs/scope-and-evidence-limits.md) and [release checklist](docs/release-checklist.md).
 
 ## Project documentation status
 
-The SOC Home Lab implementation and two controlled security investigations are documented and hosted in a private GitHub repository. Both case studies have undergone technical and evidence review. English and Croatian CV/LinkedIn project materials have been prepared separately.
+The SOC Home Lab implementation and two controlled security investigations are documented and hosted in a public GitHub repository. Both case studies have undergone technical and evidence review. English and Croatian CV/LinkedIn project materials have been prepared separately.
 
-The project is pending final public-release approval and a concluding documentation audit. Historical lab findings are presented as authorized simulations, not production security incidents.
+The repository is now public. Final documentation review and CV/LinkedIn integration are still in progress. Historical lab findings are presented as authorized simulations, not production security incidents.
 
 ## Private career drafts (local only)
 
