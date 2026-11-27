@@ -1,4 +1,6 @@
-# Pre-Publication Checklist
+# Release Checklist
+
+The repository was published publicly on 27 November 2026. Checked items are verified in the repository. Unchecked items are follow-up and are not publication blockers.
 
 - [x] Two technical investigation reports prepared and source evidence reviewed.
 - [x] Core architecture documented with separate Sentinel and Defender pipelines.
@@ -6,9 +8,9 @@
 - [x] Repository internal Markdown image links and file paths validated.
 - [x] **Author decision:** keep `DESKTOP-DC26UU9`, `SOCAdmin`, `law-soc-lab-neu` visible as lab-only identifiers (approved before public release).
 - [ ] Author review of each visible evidence image at final GitHub display size.
-- [ ] Final proofreading of all case captions, timing labels and UI pre-save notes.
-- [ ] Optional: verify repo name, description, licensing decision and GitHub visibility setting before publishing.
-- [ ] Confirm no internal secrets, credentials, raw investigation-package ZIP, subscription IDs or personal data appear in final repo.
+- [x] Final proofreading of all case captions, timing labels and UI pre-save notes.
+- [ ] Optional, not blocking: record a licensing decision. The repository name, description, and public visibility are already set.
+- [x] Confirm no internal secrets, credentials, raw investigation-package ZIP, subscription IDs or personal data appear in the published repository.
 - [x] Published via the user's GitHub workflow after author approval; repository made public on 27 November 2026.
 - [x] Prepare English/Croatian CV and LinkedIn project entries (private drafts under `career-materials/`).
 - [ ] Complete Module 14 learning check and final project-wide documentation audit.
