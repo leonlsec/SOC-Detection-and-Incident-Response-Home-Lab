@@ -6,6 +6,6 @@
 
 **Visible identifier review: PASS for obvious browser GUIDs, emails, credentials and IP/MAC; lab names intentionally retained.**
 
-**Public release: PENDING** — confirm lab-name policy, final visual editorial check, and repository assembly.
+**Public release:** Published publicly on 27 November 2026.
 
 See `EVIDENCE_MANIFEST.md` and the combined Module 14 QA report.

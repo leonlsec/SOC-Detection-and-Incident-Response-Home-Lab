@@ -22,5 +22,5 @@ Source: `Screenshots(2).zip` (original member bytes unchanged). Each packaged PN
 - Verified local README image links and packaged file integrity.
 - Viewed all selected screenshots and checked them against the documented proof claim.
 - Inspected visible crops for URL identifiers, email addresses, authentication secrets and network identifiers.
-- Lab-only names and technical context remain; public-release naming decision and final user review remain outstanding.
+- Lab-only names and technical context remain; the author approved keeping the lab-only identifiers, and the repository was published on 27 November 2026.
 - No claims of current cloud access, real intrusion, or production response are made.
