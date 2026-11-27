@@ -1,0 +1,45 @@
+digraph SOC {
+  graph [rankdir=LR, bgcolor="white", pad="0.36", nodesep="0.45", ranksep="0.75", splines=polyline, fontname="DejaVu Sans", fontcolor="#27374a", label="SOC Detection & Incident Response Home Lab  ·  Historical architecture", labelloc=t, fontsize=20];
+  node [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=11, color="#c3cfdd", fillcolor="#f4f7fb", fontcolor="#24364c", margin="0.17,0.12"];
+  edge [fontname="DejaVu Sans", fontsize=9, color="#6b819b", arrowsize=0.7];
+  subgraph cluster_vm {
+    label="ACER NITRO 5 · WINDOWS 11 PRO · VMWARE WORKSTATION PRO"; style="rounded,filled"; color="#b8cee9"; fillcolor="#f4f8ff"; fontname="DejaVu Sans"; fontsize=12;
+    kali [label="Kali Linux VM\n192.168.128.129\nControlled tests",fillcolor="#e7edfc",color="#7f9eca"];
+    win [label="Windows 11 VM\nSOC-WIN11-ENDPOINT\n192.168.128.128",fillcolor="#dbeafd",color="#4483b7",penwidth=1.8];
+    hostonly [label="VMnet1 Host-only\n192.168.128.0/24",fillcolor="#f4f8ff",shape=note,color="#b2c3d8"];
+    nat [label="VMnet8 NAT\n192.168.144.0/24\nOutbound when needed",fillcolor="#fff4df",color="#d3a759"];
+    kali -> win [label="Authorized test traffic",style=dashed,color="#5b83a4"];
+    hostonly -> kali [style=dotted,arrowhead=none];
+    hostonly -> win [style=dotted,arrowhead=none];
+    win -> nat [style=dotted,label="Cloud access"];
+  }
+  subgraph cluster_local {
+    label="LOCAL EVIDENCE"; style="rounded,filled"; fillcolor="#fafbfd"; color="#cdd7e3"; fontname="DejaVu Sans";
+    local [label="Security Event Viewer\nSysmon Operational\nWireshark packet captures",fillcolor="#eef3f8"];
+  }
+  subgraph cluster_siem {
+    label="SENTINEL · WINDOWS SECURITY LOG PIPELINE"; style="rounded,filled"; fillcolor="#f0f9f7"; color="#bedcd5"; fontname="DejaVu Sans";
+    ama [label="Azure Monitor Agent\nWindows Security Events",fillcolor="#dff4ef",color="#6cae9e"];
+    la [label="Log Analytics\nlaw-soc-lab-neu",fillcolor="#dff4ef",color="#6cae9e"];
+    sentinel [label="Microsoft Sentinel\nKQL analytics",fillcolor="#c5eadd",color="#41947e"];
+    i4 [label="INCIDENT 4\nPowerShell / Event 4688",fillcolor="#b9e3d6",color="#2d8b70"];
+    arc [label="Azure Arc\nVM management",fillcolor="#fff4df",color="#d3a759"];
+    dcr [label="DCR\nCollection policy",fillcolor="#fff4df",color="#d3a759"];
+    ama -> la -> sentinel -> i4;
+    arc -> ama [style=dotted,arrowhead=vee,label="Manage"];
+    dcr -> ama [style=dotted,arrowhead=vee,label="Configure"];
+  }
+  subgraph cluster_edr {
+    label="INDEPENDENT DEFENDER EDR / XDR PIPELINE"; style="rounded,filled"; fillcolor="#f1f6fd"; color="#c4d8ed"; fontname="DejaVu Sans";
+    mde [label="Defender for Endpoint\nEndpoint telemetry",fillcolor="#e0eafa",color="#7aa2cd"];
+    xdr [label="Microsoft Defender XDR",fillcolor="#d3e4fa",color="#6495c4"];
+    i3 [label="INCIDENT 3\nBmTestOfflineUI",fillcolor="#c6dcf6",color="#4182bd"];
+    mde -> xdr -> i3;
+  }
+  portal [label="Microsoft Defender portal\nUnified investigation interface",fillcolor="#e8e7fc",color="#9993cc",penwidth=1.5];
+  win -> local [label="Local evidence"];
+  win -> ama [label="Windows Security Events",color="#24856e"];
+  win -> mde [label="Endpoint behavior",color="#5080b9"];
+  i4 -> portal;
+  i3 -> portal;
+}

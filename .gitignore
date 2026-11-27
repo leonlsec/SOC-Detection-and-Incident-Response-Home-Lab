@@ -1,0 +1,18 @@
+# Avoid exporting local credential or full source-artifact archives
+.env
+.env.*
+*.pfx
+*.pem
+*.key
+*.p12
+*.zip
+Screenshots*/
+*Investigation_Package*/
+*.evtx
+*.pcap
+*.pcapng
+.DS_Store
+Thumbs.db
+
+# Local job application drafts — keep out of the public repo
+career-materials/

@@ -1,0 +1,11 @@
+# Scope, Evidence, and Limitations
+
+- **Authorized scope:** Disposable Windows and Kali virtual machines; host and home LAN not attack targets.
+- **Historical evidence:** September–October 2026 exercises; selected screenshots reviewed in November 2026. No claim of current cloud subscriptions, rules, agents, device health or Defender licensing.
+- **Telemetry boundaries:** `SecurityEvent` data ingestion was verified for Windows Security Events, not Sysmon-to-Sentinel ingestion. Defender XDR endpoint signals are separate from the AMA/DCR SIEM pipeline.
+- **Incident boundaries:** Sentinel Incident 4 covers a controlled Windows `4688` PowerShell marker. Defender Incident 3 covers a separate Defender `BmTestOfflineUI` behavior-monitoring demonstration. They are unrelated lab cases.
+- **Status nuance:** Sentinel validated-rule image shows the Review + create stage before Save. Defender alert classification image shows selected expected-activity disposition before Save. Separate saved alert and incident views establish Defender resolution, but the incident-level classification remained Unclassified.
+- **Incomplete records:** The full original KQL of the Sentinel timeline funnel was not preserved. The parent process's creation event was not found. The entire Defender test PowerShell script is not visible in the process tree. The original Defender demonstration raised `CommandNotFoundException` for `hidden` and still generated a blocked detection.
+- **Privacy:** Browser URL/tenant GUID sections were cropped. IP/MAC identifiers on the Defender inventory were masked. Lab hostname `DESKTOP-DC26UU9`, local account `SOCAdmin`, and workspace `law-soc-lab-neu` remain visible; publication of those fields awaits author review. No original source screenshot ZIP, tokens, credentials or raw Defender investigation package is in the repository.
+- **Provenance:** Evidence manifests inside each investigation name the original archived screenshot, packaged derivative, SHA-256 hashes, and caveats. Read each case before making general claims about the tools.
+- **Reproducibility:** All historical `ago(7d)` windows should be adapted for time if rerun on available retained data. Do not claim that current subscription is active or reproduce historical KQL outputs without actual retained records.

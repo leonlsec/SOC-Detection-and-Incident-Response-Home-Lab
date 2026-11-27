@@ -1,0 +1,49 @@
+flowchart LR
+    subgraph HOST["Acer Nitro 5 · Windows 11 Pro · VMware Workstation Pro"]
+        subgraph HN["VMnet1 · Host-only · 192.168.128.0/24"]
+            K["Kali Linux VM<br/>192.168.128.129<br/>Controlled testing"]
+            W["Windows 11 VM<br/>SOC-WIN11-ENDPOINT<br/>192.168.128.128"]
+            K -. "authorized test traffic" .-> W
+        end
+        NAT["VMnet8 · NAT<br/>192.168.144.0/24<br/>Windows controlled outbound"]
+        W -. "external/cloud when required" .-> NAT
+    end
+
+    subgraph LOCAL["Local endpoint evidence (not proven to be in Sentinel)"]
+        WS["Windows Event Viewer<br/>Security log"]
+        SM["Sysmon Operational<br/>Events 1 / 3 / 5"]
+        WI["Wireshark<br/>DNS / TCP / TLS metadata"]
+    end
+    W --> WS
+    W --> SM
+    W --> WI
+
+    subgraph SIEM["SIEM route · verified Windows Security Events"]
+        ARC["Azure Arc<br/>VM onboarding / management"]
+        AMA["Azure Monitor Agent"]
+        DCR["Data Collection Rule<br/>selects Windows Security Events"]
+        LA["Log Analytics<br/>law-soc-lab-neu"]
+        SEN["Microsoft Sentinel<br/>KQL + analytics"]
+        INC4["Sentinel Incident 4<br/>4688 PowerShell test"]
+        ARC -. "manages agent" .-> AMA
+        DCR -. "configures collection" .-> AMA
+        AMA --> LA --> SEN --> INC4
+    end
+    WS -->|"Security Event 4688"| AMA
+
+    subgraph EDR["Separate EDR/XDR route"]
+        MDE["Defender for Endpoint<br/>endpoint sensor"]
+        XDR["Microsoft Defender XDR"]
+        INC3["Defender Incident 3<br/>BmTestOfflineUI"]
+        MDE --> XDR --> INC3
+    end
+    W -->|"endpoint behavior"| MDE
+    INC4 --> PORTAL["Microsoft Defender portal<br/>unified investigation interface"]
+    INC3 --> PORTAL
+
+    classDef win fill:#e4eefc,stroke:#3273b7,color:#10243e;
+    classDef amber fill:#fff1d2,stroke:#b47623,color:#483012;
+    classDef teal fill:#daf5ef,stroke:#20866e,color:#0d433b;
+    class W,WS,SM,WI win;
+    class K,NAT,ARC,DCR amber;
+    class AMA,LA,SEN,MDE,XDR,INC4,INC3 teal;

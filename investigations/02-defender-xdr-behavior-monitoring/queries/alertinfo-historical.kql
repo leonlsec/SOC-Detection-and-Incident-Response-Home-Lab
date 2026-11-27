@@ -1,0 +1,4 @@
+AlertInfo
+| where Timestamp > ago(7d)
+| project Timestamp, Title, Severity, Category, ServiceSource, DetectionSource, AlertId
+| order by Timestamp desc
