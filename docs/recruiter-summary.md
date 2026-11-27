@@ -11,4 +11,4 @@ The portfolio includes two evidence-backed investigations:
 
 **Demonstrated skills:** Windows Event analysis, SIEM/KQL, endpoint process investigation, EDR/XDR triage, virtual networking, troubleshooting and technical incident reporting.
 
-**Scope:** Authorized home-lab simulations, not production SOC operations. The cloud environment is historical, and the public-release checklist must be completed before publishing the repository.
+**Scope:** Authorized home-lab simulations, not production SOC operations. The cloud environment is historical. The repository was published publicly on 27 November 2026, after the release checklist was completed.
